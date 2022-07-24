@@ -1,17 +1,17 @@
-
-
 .header {
     width: 100%;
-    padding: 1% 0;
+    height: 12vh;
     background-color: lightcoral;
     border: 2px solid black;
+    box-sizing: border-box;
+    position: fixed;
     .headerWrap {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         .logotype {
             .logoImg {
-                width: 30%;
+                width: 11vh;
             }
         }
         .menu {
@@ -20,7 +20,7 @@
                 list-style-type: none;
                 font-size: 3vh;
                 .menuItem {
-                    margin: 0 4%;
+                    padding: 0% 15%;
                     a {
                         text-decoration: none;
                         color: black;
@@ -28,7 +28,7 @@
                     &:hover {
                         font-size: 3vh;
                         border-bottom: 4px solid wheat;
-                        padding-bottom: 3%;
+                        padding-bottom: 2%;
                         transition: 0.5s;
                     }
                 }

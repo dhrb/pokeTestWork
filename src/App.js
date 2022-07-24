@@ -8,7 +8,7 @@ import axios from 'axios';
 function App() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-      axios.get('https://pokeapi.co/api/v2/pokemon')
+        axios.get('https://pokeapi.co/api/v2/pokemon')
       .then (res => {
           setPosts(res.data.results)
       })
@@ -22,9 +22,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className='cards'>
-        {pokemons}
-      </div>
+      <Body posts={posts}/>
       <Footer />
     </div>
   );

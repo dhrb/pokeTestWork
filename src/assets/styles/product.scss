@@ -1,0 +1,18 @@
+.product{
+    width: 40%;
+    height: auto;
+    padding: 2%;
+    .productWrapper{
+        border: 2px solid red;
+        border-radius: 15px;
+        padding: 10%;
+        .item {
+            .itemHeader {
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .itemBody {
+            }
+        }
+    }
+}
