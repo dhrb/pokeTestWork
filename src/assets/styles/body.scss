@@ -6,11 +6,12 @@
         border-top: none;
         padding: 2%;
         .sorting {
-
+            background-color: red;
         }
         .product {
             display: flex;
-            flex-wrap: wrap;
+            text-align: center;
+            max-height: 20vh;
         }
     }
 }

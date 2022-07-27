@@ -7,22 +7,23 @@ import axios from 'axios';
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+        setLoading(true)
         axios.get('https://pokeapi.co/api/v2/pokemon')
-      .then (res => {
+        .then (res => {
           setPosts(res.data.results)
-      })
-      .catch (err => {
+          setLoading(false)
+        })
+        .catch (err => {
           console.log(err.message)
-      })
+        })
   }, []);
-  const pokemons = posts.map((post) => {
-    return <p>{post.name}</p>
-  })
+
   return (
     <div className="App">
       <Header />
-      <Body posts={posts}/>
+      <Body posts={posts} loading={loading}/>
       <Footer />
     </div>
   );

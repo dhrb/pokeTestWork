@@ -1,6 +1,8 @@
 import './../../../assets/styles/product.scss'
+import {useState, useEffect} from 'react';
 
 function Product(props) {
+    const [currentPage, setCurrentPage] = useState(1);
     return (
         <div className="product">
             <div className="productWrapper">
@@ -12,7 +14,7 @@ function Product(props) {
                     <div className="itemBody">
                         <p className="pokemonClass">Strength</p>
                         <p className="pokemonPower">10</p>
-                        <p className="">17</p>
+                        <p className="pokeHealth">17</p>
                     </div>
                 </div>
             </div>
